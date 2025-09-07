@@ -1,4 +1,4 @@
-@reference "../../assets/css/globals.css";
+@reference "../../../app/assets/css/globals.css";
 
 .xRadioGroupWrapper {
   @apply flex flex-col gap-2;
@@ -16,7 +16,7 @@
       @apply outline-none appearance-none;
 
       &:checked + div.xRadioGroupRadioCircle {
-        @apply border-4 border-blue-500;
+        @apply border-4 border-sky-500;
       }
 
       &:disabled + div.xRadioGroupRadioCircle {

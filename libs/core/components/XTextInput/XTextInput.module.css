@@ -1,4 +1,4 @@
-@reference "../../assets/css/globals.css";
+@reference "../../../app/assets/css/globals.css";
 
 .xTextInputWrapper {
   @apply space-y-2 w-full;

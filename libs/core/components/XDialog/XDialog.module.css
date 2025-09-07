@@ -1,4 +1,4 @@
-@reference "../../assets/css/globals.css";
+@reference "../../../app/assets/css/globals.css";
 
 div.xDialogOverlay {
   @apply
@@ -45,7 +45,7 @@ div.xDialogOverlay {
 
     &.xDialogInfo {
       & > div.xDialogHeader {
-        @apply text-blue-500;
+        @apply text-sky-500;
       }
     }
 

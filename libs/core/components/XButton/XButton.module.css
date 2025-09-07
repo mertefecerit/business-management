@@ -1,4 +1,4 @@
-@reference "../../assets/css/globals.css";
+@reference "../../../app/assets/css/globals.css";
 
 .xButton {
   @apply
@@ -35,20 +35,20 @@
     &.xButtonPrimary {
       @apply
       border
-      border-blue-500
-      bg-blue-500
-      ring-blue-200
+      border-sky-500
+      bg-sky-500
+      ring-sky-200
       text-white
-      hover:bg-blue-600;
+      hover:bg-sky-600;
     }
     &.xButtonSecondary {
       @apply
       border
-      border-blue-200
-      bg-blue-200
-      ring-blue-200
-      text-blue-700
-      hover:bg-blue-300;
+      border-sky-200
+      bg-sky-200
+      ring-sky-200
+      text-sky-700
+      hover:bg-sky-300;
     }
     &.xButtonTertiary {
       @apply

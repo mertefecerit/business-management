@@ -1,4 +1,4 @@
-@reference "../../assets/css/globals.css";
+@reference "../../../app/assets/css/globals.css";
 
 .xDropdownWrapper {
   & > .xDropdown {
