@@ -1,0 +1,49 @@
+.xRadioGroupWrapper {
+  @apply flex flex-col gap-2;
+
+  &.xRadioGroupIsInvalid {
+    @apply border rounded-2xl border-error-600;
+  }
+
+  & > label {
+    @apply flex gap-2 items-center cursor-pointer;
+
+
+
+    & > input[type="radio"] {
+      @apply outline-none appearance-none;
+
+      &:checked + div.xRadioGroupRadioCircle {
+        @apply border-4 border-brand-500;
+      }
+
+      &:disabled + div.xRadioGroupRadioCircle {
+        @apply border-zinc-300 bg-zinc-100;
+      }
+
+      &:disabled ~ div.xRadioGroupRadioLabel {
+        @apply cursor-not-allowed;
+      }
+
+    }
+
+    & > div.xRadioGroupRadioCircle {
+      @apply size-6 rounded-full border border-zinc-200 shrink-0 transition-all ease-in-out duration-100;
+    }
+
+
+
+    & > div.xRadioGroupRadioLabel {
+      @apply flex flex-col;
+      & > span:first-child {
+        @apply text-xl font-medium text-zinc-700;
+      }
+      & > span:last-child {
+        @apply text-sm font-medium text-zinc-500;
+      }
+    }
+  }
+  & > ul {
+    @apply px-2 text-xs flex flex-col gap-1 text-error-600;
+  }
+}

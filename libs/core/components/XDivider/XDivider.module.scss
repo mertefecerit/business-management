@@ -1,0 +1,11 @@
+.xDivider {
+  @apply flex items-center;
+  & > div.xDividerLine {
+    @apply flex-grow border border-zinc-100;
+  }
+  & > span.xDividerText {
+    @apply mx-4 text-zinc-300 text-xs font-medium;
+  }
+}
+
+

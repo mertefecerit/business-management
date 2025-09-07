@@ -1,0 +1,82 @@
+.xButton {
+  @apply
+  font-medium
+  text-nowrap
+  transition-all
+  ease-in-out
+  outline-0
+  cursor-pointer
+  focus-within:ring-2
+  select-none;
+
+  &.xButtonSmall {
+    @apply
+    h-10
+    px-3
+    rounded-xl;
+  }
+
+  &.xButtonMedium {
+    @apply
+    h-11
+    px-3.5
+    rounded-[0.875rem];
+  }
+
+  &.xButtonLarge {
+    @apply
+    h-12
+    px-3.5
+    rounded-[0.875rem];
+  }
+  &:not(.xButtonDisabled) {
+    &.xButtonPrimary {
+      @apply
+      border
+      border-brand-500
+      bg-brand-500
+      ring-brand-200
+      text-white
+      hover:bg-brand-600;
+    }
+    &.xButtonSecondary {
+      @apply
+      border
+      border-brand-200
+      bg-brand-200
+      ring-brand-200
+      text-brand-700
+      hover:bg-brand-300;
+    }
+    &.xButtonTertiary {
+      @apply
+      border
+      border-gray-200
+      bg-white
+      ring-gray-200
+      text-gray-700
+      hover:bg-gray-50;
+    }
+    &.xButtonDestructive {
+      @apply
+      border
+      border-error-500
+      bg-error-500
+      ring-error-200
+      text-white
+      hover:bg-error-600;
+    }
+  }
+  &.xButtonDisabled {
+    @apply
+    border
+    border-gray-100
+    bg-gray-100
+    text-gray-400
+    cursor-not-allowed;
+  }
+
+  & > .xButtonChildrenWrapper {
+    @apply flex items-center gap-2 justify-center;
+  }
+}

@@ -1,0 +1,56 @@
+div.xDialogOverlay {
+  @apply
+  fixed
+  top-0
+  left-0
+  w-full
+  bg-black/20
+  h-dvh
+  flex
+  items-center
+  justify-center
+  backdrop-blur-sm
+  text-sm
+  z-[51];
+  & > div.xDialog {
+    @apply
+    rounded-2xl
+    bg-white border
+    border-zinc-100
+    shadow-sm
+    max-w-[20rem]
+    min-w-[20rem];
+    & > div.xDialogHeader {
+      @apply
+      flex items-center gap-2
+      font-medium
+      text-lg
+      px-2
+      py-2;
+      & > svg {
+        @apply text-3xl;
+      }
+    }
+    & > div.xDialogBody {
+      @apply
+      text-zinc-500
+      px-2
+      pb-2;
+    }
+    & > div.xDialogFooter {
+      @apply p-2 flex items-center justify-end gap-2;
+    }
+
+    &.xDialogInfo {
+      & > div.xDialogHeader {
+        @apply text-brand-500;
+      }
+    }
+
+    &.xDialogDestructive {
+      & > div.xDialogHeader {
+        @apply text-error-500;
+      }
+    }
+  }
+}

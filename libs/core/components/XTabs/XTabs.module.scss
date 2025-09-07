@@ -1,0 +1,29 @@
+.xTabs {
+  @apply bg-white flex select-none flex-wrap;
+  & > .xTab {
+    @apply
+    h-12
+    border-b-2
+    text-nowrap
+    border-transparent
+    flex items-center
+    gap-2
+    px-4;
+
+    &:not(&.xTabDisabled, &.xTabActive) {
+      @apply
+      cursor-pointer
+      text-zinc-700
+      hover:border-brand-500
+      hover:text-brand-500;
+    }
+
+    &.xTabActive {
+      @apply border-brand-500 text-brand-500;
+    }
+
+    &.xTabDisabled {
+      @apply cursor-not-allowed bg-zinc-100 text-zinc-400;
+    }
+  }
+}

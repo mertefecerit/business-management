@@ -1,0 +1,48 @@
+.xTextAreaWrapper {
+  @apply space-y-2 w-full;
+
+  & > div {
+    @apply flex justify-between gap-2;
+    & > label {
+      @apply font-medium text-sm text-gray-600;
+      & > span {
+        @apply text-red-600;
+      }
+    }
+  }
+
+  & > small {
+    @apply text-xs text-gray-400;
+  }
+
+  & > ul {
+    @apply text-xs flex flex-col gap-1 text-red-600;
+  }
+
+  & > .xTextArea {
+    @apply border border-gray-200 flex items-center gap-2 shadow rounded-lg overflow-hidden p-2;
+
+    &:not(.xTextAreaIsInvalid), &:not(.xTextAreaIsDisabled) {
+      @apply border-gray-200;
+    }
+
+    &.xTextAreaIsInvalid {
+      @apply border-red-600 shadow-red-300;
+    }
+
+    &.xTextAreaIsDisabled {
+      @apply border-gray-200 bg-gray-100 cursor-not-allowed;
+      & > textarea {
+        @apply cursor-not-allowed;
+      }
+    }
+
+    & > svg {
+      @apply text-gray-400 shrink-0;
+    }
+
+    & > textarea {
+      @apply min-h-32 w-full outline-0;
+    }
+  }
+}

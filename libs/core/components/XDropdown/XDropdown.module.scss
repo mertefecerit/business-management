@@ -1,0 +1,9 @@
+.xDropdownWrapper {
+  & > .xDropdown {
+    @apply bg-white rounded-lg p-2 border border-zinc-200 shadow-sm;
+  }
+}
+
+.xDropdownMenuItem {
+  @apply h-8 px-4 flex items-center gap-2 rounded-lg hover:bg-zinc-100 text-zinc-700 cursor-pointer text-sm font-medium;
+}

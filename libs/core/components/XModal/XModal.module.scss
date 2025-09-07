@@ -1,0 +1,41 @@
+.xModalOverlay {
+  @apply
+  fixed
+  top-0
+  left-0
+  w-full
+  h-dvh
+  flex
+  flex-col
+  justify-start
+  items-center
+  overflow-auto
+  backdrop-blur-sm
+  text-sm
+  z-[51]
+  bg-black/10;
+  & > .xModal {
+    @apply bg-white rounded-2xl my-20 flex flex-col gap-2 p-2 origin-[top_center];
+    &.xModalSmall {
+      @apply w-[20rem];
+    }
+    &.xModalMedium {
+      @apply w-[30rem];
+    }
+    &.xModalLarge {
+      @apply w-[40rem];
+    }
+    & > .xModalCloseIcon {
+      @apply
+      self-end
+      text-zinc-500
+      cursor-pointer
+      hover:bg-zinc-50
+      rounded-full p-[0.1rem]
+      hover:text-zinc-600;
+      & > svg {
+        @apply text-lg;
+      }
+    }
+  }
+}
