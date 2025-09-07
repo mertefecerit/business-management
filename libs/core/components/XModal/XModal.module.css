@@ -1,3 +1,5 @@
+@reference "../../assets/css/globals.css";
+
 .xModalOverlay {
   @apply
   fixed

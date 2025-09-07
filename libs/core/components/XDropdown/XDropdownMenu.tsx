@@ -2,7 +2,7 @@
 
 import React from 'react';
 import {AnimatePresence, motion} from "motion/react";
-import styles from "@/libs/core/components/XDropdown/XDropdown.module.scss";
+import styles from "@/libs/core/components/XDropdown/XDropdown.module.css";
 import useXDropdown from "@/libs/core/components/XDropdown/useXDropdown";
 import {IXDropdownMenuProps} from "@/libs/core/components/XDropdown/XDropdownTypes";
 

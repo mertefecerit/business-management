@@ -1,7 +1,7 @@
 "use client"
 
 import React from 'react';
-import Styles from "./XButton.module.scss";
+import Styles from "./XButton.module.css";
 import SpinnerIcon from './icons/SpinnerIcon';
 import {IXButtonProps} from "@/libs/core/components/XButton/XButtonTypes";
 

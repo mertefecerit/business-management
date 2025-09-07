@@ -1,6 +1,8 @@
 import type { Metadata } from "next";
+import AppStoreProvider from "@/libs/app/providers/AppStoreProvider";
 import { Inter } from "next/font/google";
-import "./globals.css";
+import "@/libs/app/assets/css/globals.css";
+import React from "react";
 
 const inter = Inter({
     subsets: ['latin']
@@ -21,7 +23,9 @@ export default function RootLayout({
       <body
           className={`${inter.className} antialiased text-zinc-700`}
       >
-        {children}
+      <AppStoreProvider>
+          {children}
+      </AppStoreProvider>
       </body>
     </html>
   );

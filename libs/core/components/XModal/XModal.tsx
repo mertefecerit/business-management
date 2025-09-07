@@ -1,7 +1,7 @@
 "use client";
 
 import React from 'react';
-import styles from './XModal.module.scss';
+import styles from './XModal.module.css';
 import {IXModalProps} from "@/libs/core/components/XModal/XModalTypes";
 import {XIcon} from "@phosphor-icons/react";
 import {AnimatePresence, motion} from "motion/react";

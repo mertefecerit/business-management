@@ -2,7 +2,7 @@
 
 import React, {useRef, useState} from 'react';
 import {IXDropdownProps} from "@/libs/core/components/XDropdown/XDropdownTypes";
-import styles from "./XDropdown.module.scss";
+import styles from "./XDropdown.module.css";
 import { XDropdownContext } from "@/libs/core/components/XDropdown/useXDropdown";
 import XDropdownMenu from "@/libs/core/components/XDropdown/XDropdownMenu";
 import XDropdownTrigger from "@/libs/core/components/XDropdown/XDropdownTrigger";

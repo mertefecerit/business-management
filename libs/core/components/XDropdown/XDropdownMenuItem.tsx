@@ -1,6 +1,6 @@
 import React from 'react';
 import {IXDropdownMenuItemProps} from "@/libs/core/components/XDropdown/XDropdownTypes";
-import styles from "./XDropdown.module.scss";
+import styles from "./XDropdown.module.css";
 import useXDropdown from "@/libs/core/components/XDropdown/useXDropdown";
 
 const XDropdownMenuItem = ({children, ...props}:IXDropdownMenuItemProps) => {

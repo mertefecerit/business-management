@@ -1,7 +1,7 @@
 "use client";
 
 import React, {useRef, useState} from 'react';
-import Styles from "./XDialog.module.scss";
+import Styles from "./XDialog.module.css";
 import XButton from "@/libs/core/components/XButton/XButton";
 import {useClickAway} from "react-use";
 import {IXDialogProps} from "@/libs/core/components/XDialog/XDialogTypes";

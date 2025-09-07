@@ -1,7 +1,7 @@
 "use client";
 
 import React, {useId} from 'react';
-import styles from './XTabs.module.scss';
+import styles from './XTabs.module.css';
 import {IXTabsProps} from "@/libs/core/components/XTabs/XTabsTypes";
 
 const XTabs = (props:IXTabsProps) => {

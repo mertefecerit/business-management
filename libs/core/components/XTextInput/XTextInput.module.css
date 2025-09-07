@@ -1,0 +1,71 @@
+@reference "../../assets/css/globals.css";
+
+.xTextInputWrapper {
+  @apply space-y-2 w-full;
+
+  & > div {
+    @apply flex justify-between gap-2;
+    & > label {
+      @apply font-medium text-sm text-gray-600;
+      & > span {
+        @apply text-red-600;
+      }
+    }
+  }
+
+  & > small {
+    @apply text-xs text-gray-400;
+  }
+
+  & > ul {
+    @apply text-xs flex flex-col gap-1 text-red-600;
+  }
+
+  & > .xTextInput {
+    @apply border border-gray-200 flex items-center gap-2 shadow;
+
+    &:not(.xTextInputIsInvalid), &:not(.xTextInputIsDisabled) {
+      @apply border-gray-200;
+    }
+
+    &.xTextInputIsInvalid {
+      @apply border-red-600 shadow-red-300;
+    }
+
+    &.xTextInputIsDisabled {
+      @apply border-gray-200 bg-gray-100 cursor-not-allowed;
+      & > input {
+        @apply cursor-not-allowed;
+      }
+    }
+
+    & > svg {
+      @apply text-gray-400 shrink-0;
+    }
+
+    & > input {
+      @apply size-full outline-0;
+    }
+
+    &.xTextInputSmall {
+      @apply
+      h-10
+      px-3
+      rounded-xl;
+    }
+
+    &.xTextInputMedium {
+      @apply
+      h-11
+      px-3.5
+      rounded-[0.875rem];
+    }
+
+    &.xTextInputLarge {
+      @apply
+      h-12
+      px-3.5
+      rounded-[0.875rem];
+    }
+  }
+}

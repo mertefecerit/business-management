@@ -1,7 +1,7 @@
 "use client"
 
 import React, {useId} from 'react';
-import Styles from "./XTextArea.module.scss";
+import Styles from "./XTextArea.module.css";
 import {IXTextAreaProps} from "@/libs/core/components/XTextArea/XTextAreaTypes";
 
 

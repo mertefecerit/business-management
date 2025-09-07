@@ -2,7 +2,7 @@
 
 import React, {useId} from 'react';
 import {IXRadioGroupProps} from "@/libs/core/components/XRadioGroup/XRadioGroupTypes";
-import styles from "./XRadioGroup.module.scss";
+import styles from "./XRadioGroup.module.css";
 
 const XRadioGroup = <T extends string | number>({options=[], errors, ...props}:IXRadioGroupProps<T>) => {
     const generatedId = useId();

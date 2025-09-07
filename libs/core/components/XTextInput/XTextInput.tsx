@@ -1,7 +1,7 @@
 "use client"
 
 import React, {useId, useState} from 'react';
-import Styles from "./XTextInput.module.scss";
+import Styles from "./XTextInput.module.css";
 import {IXTextInputProps} from "@/libs/core/components/XTextInput/XTextInputTypes";
 import {EyeIcon, EyeSlashIcon} from "@phosphor-icons/react";
 

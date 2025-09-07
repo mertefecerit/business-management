@@ -1,0 +1,17 @@
+@reference "../../assets/css/globals.css";
+
+.xCard {
+  @apply bg-white rounded-2xl shadow p-4;
+  &.xCardSmall {
+    @apply max-w-[20rem];
+  }
+  &.xCardMedium {
+    @apply md:max-w-[32rem];
+  }
+  &.xCardLarge {
+    @apply lg:max-w-[48rem];
+  }
+  &.xCardFull {
+    @apply w-full max-w-full;
+  }
+}

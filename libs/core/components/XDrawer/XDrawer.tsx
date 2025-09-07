@@ -1,7 +1,7 @@
 "use client";
 
 import React, {useRef} from 'react';
-import Styles from "./XDrawer.module.scss";
+import Styles from "./XDrawer.module.css";
 import {IXDrawerProps} from "@/libs/core/components/XDrawer/XDrawerTypes";
 import {AnimatePresence, motion} from "motion/react";
 import {useClickAway} from "react-use";

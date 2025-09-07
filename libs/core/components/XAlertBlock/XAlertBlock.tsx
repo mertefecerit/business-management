@@ -2,7 +2,7 @@
 
 import React from 'react';
 import {useMemo} from "react"
-import Styles from "./XAlertBlock.module.scss";
+import Styles from "./XAlertBlock.module.css";
 import {IXAlertBlockProps} from "@/libs/core/components/XAlertBlock/XAlertBlockTypes";
 import XCloseIcon from "@/libs/core/components/XIcons/XCloseIcon";
 import XDangerIcon from "@/libs/core/components/XIcons/XDangerIcon";

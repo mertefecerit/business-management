@@ -1,3 +1,5 @@
+@reference "../../assets/css/globals.css";
+
 .xAlertBlock {
   @apply flex justify-between items-center gap-2 rounded-2xl select-none p-4;
   &.xAlertBlockInfo {
