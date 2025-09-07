@@ -6,16 +6,7 @@ import {IXTextInputProps} from "@/libs/core/components/XTextInput/XTextInputType
 import {EyeIcon, EyeSlashIcon} from "@phosphor-icons/react";
 
 
-const XTextInput = ({
-                        sizing = 'md',
-                        label,
-                        hint,
-                        errors,
-                        startIcon,
-                        labelEnd,
-                        type = "text",
-                        ...props
-                    }: IXTextInputProps) => {
+const XTextInput = ({sizing = 'md', label, hint, errors, startIcon, labelEnd, type = "text", ...props}: IXTextInputProps) => {
     const generatedId = useId();
     const inputId = props.id || generatedId;
 

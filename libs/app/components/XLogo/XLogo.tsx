@@ -1,6 +1,6 @@
 import React from 'react';
 import Image from "next/image";
-import Logo from "../../assets/images/butbecauselogo.webp";
+import Logo from "../../assets/images/logo.webp";
 import Link from "next/link";
 
 const XLogo = () => {

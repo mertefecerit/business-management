@@ -7,7 +7,7 @@ const AuthSignInLink = () => {
     return (
         <Link
             href={"/auth/forgot-password"}
-            className={"text-brand-500 font-medium hover:text-brand-600 text-sm"}
+            className={"text-blue-500 font-medium hover:text-blue-600 text-sm"}
         >
             Forgot Password?
         </Link>

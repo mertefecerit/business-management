@@ -35,20 +35,20 @@
     &.xButtonPrimary {
       @apply
       border
-      border-brand-500
-      bg-brand-500
-      ring-brand-200
+      border-blue-500
+      bg-blue-500
+      ring-blue-200
       text-white
-      hover:bg-brand-600;
+      hover:bg-blue-600;
     }
     &.xButtonSecondary {
       @apply
       border
-      border-brand-200
-      bg-brand-200
-      ring-brand-200
-      text-brand-700
-      hover:bg-brand-300;
+      border-blue-200
+      bg-blue-200
+      ring-blue-200
+      text-blue-700
+      hover:bg-blue-300;
     }
     &.xButtonTertiary {
       @apply
@@ -62,11 +62,11 @@
     &.xButtonDestructive {
       @apply
       border
-      border-error-500
-      bg-error-500
-      ring-error-200
+      border-red-500
+      bg-red-500
+      ring-red-200
       text-white
-      hover:bg-error-600;
+      hover:bg-red-600;
     }
   }
   &.xButtonDisabled {

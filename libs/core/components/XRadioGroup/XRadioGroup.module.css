@@ -4,7 +4,7 @@
   @apply flex flex-col gap-2;
 
   &.xRadioGroupIsInvalid {
-    @apply border rounded-2xl border-error-600;
+    @apply border rounded-2xl border-red-600;
   }
 
   & > label {
@@ -16,7 +16,7 @@
       @apply outline-none appearance-none;
 
       &:checked + div.xRadioGroupRadioCircle {
-        @apply border-4 border-brand-500;
+        @apply border-4 border-blue-500;
       }
 
       &:disabled + div.xRadioGroupRadioCircle {
@@ -46,6 +46,6 @@
     }
   }
   & > ul {
-    @apply px-2 text-xs flex flex-col gap-1 text-error-600;
+    @apply px-2 text-xs flex flex-col gap-1 text-red-600;
   }
 }

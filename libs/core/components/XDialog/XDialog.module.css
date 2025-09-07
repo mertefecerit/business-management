@@ -45,13 +45,13 @@ div.xDialogOverlay {
 
     &.xDialogInfo {
       & > div.xDialogHeader {
-        @apply text-brand-500;
+        @apply text-blue-500;
       }
     }
 
     &.xDialogDestructive {
       & > div.xDialogHeader {
-        @apply text-error-500;
+        @apply text-red-500;
       }
     }
   }

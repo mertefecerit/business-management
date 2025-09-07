@@ -15,9 +15,9 @@
     }
   }
   &.xAlertBlockError {
-    @apply bg-error-100 text-error-600;
+    @apply bg-red-100 text-red-600;
     & > div.xAlertSeverityIcons{
-      @apply text-error-500;
+      @apply text-red-500;
     }
   }
   &.xAlertBlockSuccess {

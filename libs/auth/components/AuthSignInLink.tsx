@@ -9,7 +9,7 @@ const AuthSignInLink = () => {
             className={"text-xs text-zinc-500 flex items-center gap-2 justify-center"}>
             Already have an account?
             <Link href={"/auth/sign-in"}
-                  className={"text-brand-500 font-medium hover:text-brand-600"}
+                  className={"text-blue-500 font-medium hover:text-blue-600"}
             >
                 Sign in
             </Link>
