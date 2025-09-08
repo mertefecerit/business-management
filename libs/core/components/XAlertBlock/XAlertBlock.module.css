@@ -21,9 +21,9 @@
     }
   }
   &.xAlertBlockSuccess {
-    @apply bg-success-100 text-success-600;
+    @apply bg-green-100 text-green-600;
     & > div.xAlertSeverityIcons{
-      @apply text-success-500;
+      @apply text-green-500;
     }
   }
   & > div.xAlertBlockMessage {

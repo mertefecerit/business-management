@@ -14,6 +14,8 @@ const useAuth = () => {
     const router = useRouter();
     const dispatch = useAppDispatch()
 
+    const logoutRedirectRoute = process.env.NEXT_PUBLIC_AUTH_LOGOUT_REDIRECT ?? '/auth/sign-in';
+
     const onGetUserHandler = async () => {
         try {
             setIsOnGetUserHandlerPending(true);
@@ -30,7 +32,7 @@ const useAuth = () => {
         try {
             setIsOnLogoutHandlerPending(true);
             await logoutService();
-            router.push('/auth/sign-in');
+            router.push(logoutRedirectRoute);
             dispatch(clearUser());
             deleteCookie('token');
         }catch(err) {

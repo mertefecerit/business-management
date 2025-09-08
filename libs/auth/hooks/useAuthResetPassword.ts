@@ -17,6 +17,7 @@ const useAuthResetPassword = () => {
     const {values:form, handleChange:setForm, reset} = useForm<IAuthResetPasswordForm>(createAuthResetPasswordFormEntity());
     const [isPending, setIsPending] = useState<boolean>(false);
     const [errorBag, setErrorBag] = useState<TErrorBag<IAuthResetPasswordForm>>({});
+    const signInRoute = process.env.NEXT_PUBLIC_AUTH_SIGN_IN_ROUTE ?? '/auth/sign-in';
 
     const onResetPasswordHandler = async () => {
         setIsPending(false);
@@ -28,7 +29,7 @@ const useAuthResetPassword = () => {
             try {
                 setIsPending(true);
                 const res = await resetPasswordService(form);
-                router.push(`/auth/sign-in?message=${encodeURIComponent(res.message)}`)
+                router.push(`${signInRoute}?message=${encodeURIComponent(res.message)}`)
             }catch (error) {
                 if (error instanceof AxiosError) {
                     if(error.response && error.response?.data?.errors && error.response?.data?.message){

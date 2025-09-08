@@ -7,6 +7,7 @@ import AuthForgotPasswordService from "@/libs/auth/services/AuthForgotPasswordSe
 import {useRouter} from "next/navigation";
 import AuthForgotPasswordValidation from "@/libs/auth/validations/AuthForgotPasswordValidation";
 import * as z from "zod";
+
 const useAuthForgotPassword = () => {
 
     const router = useRouter();
@@ -15,6 +16,8 @@ const useAuthForgotPassword = () => {
     const {values:form, handleChange:setForm, reset} = useForm<IAuthForgotPasswordForm>(createAuthForgotPasswordEntity());
     const [isPending, setIsPending] = useState<boolean>(false);
     const [errorBag, setErrorBag] = useState<TErrorBag<IAuthForgotPasswordForm>>({});
+
+    const signInRoute = process.env.NEXT_PUBLIC_AUTH_SIGN_IN_ROUTE ?? '/auth/sign-in';
 
     const onForgotPasswordHandler = async () => {
         setIsPending(false);
@@ -26,7 +29,7 @@ const useAuthForgotPassword = () => {
             try {
                 setIsPending(true);
                 const res = await forgotPasswordService(form);
-                router.push(`/auth/sign-in?message=${encodeURIComponent(res.message)}`)
+                router.push(`${signInRoute}?message=${encodeURIComponent(res.message)}`)
             }catch (error) {
                 if (error instanceof AxiosError) {
                     if(error.response && error.response?.data?.errors && error.response?.data?.message){

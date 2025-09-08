@@ -26,6 +26,8 @@ const useAuthSignIn = () => {
     const {signInService} = AuthSignInService();
     const {signInFormValidation} = AuthSignInValidation();
 
+    const signInRedirectRoute = process.env.NEXT_PUBLIC_AUTH_SIGN_IN_REDIRECT_ROUTE ?? '/dashboard';
+
     // HANDLERS
     const loginHandler = async () => {
         dispatch(clearErrorBag());
@@ -41,7 +43,7 @@ const useAuthSignIn = () => {
                 setCookie('token', response.token, {
                     expires: dayjs().add(30, 'day').toDate(),
                 });
-                router.push('/wall');
+                router.push(signInRedirectRoute);
             } catch (error) {
                 if (error instanceof AxiosError) {
                     if (error.response && error.response?.data?.errors && error.response?.data?.message) {

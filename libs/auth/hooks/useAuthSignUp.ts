@@ -17,6 +17,8 @@ const useAuthSignUp = () => {
     const {values:form, reset, handleChange:setForm} = useForm<IAuthSignUpForm>(createAuthSignUpFormEntity());
     const {authSignUpValidationCheck} = AuthSignUpValidation();
     const router = useRouter();
+    const signInRoute = process.env.NEXT_PUBLIC_AUTH_SIGN_IN_ROUTE ?? '/auth/sign-in';
+
     // HANDLERS
     const onAuthSignUpHandler = async () => {
         setErrorBag({});
@@ -28,7 +30,7 @@ const useAuthSignUp = () => {
             try {
                 setIsPending(true);
                 const res = await signUpService(form);
-                router.push(`/auth/sign-in?message=${encodeURIComponent(res.message)}`)
+                router.push(`${signInRoute}?message=${encodeURIComponent(res.message)}`)
             }catch (error) {
                 if (error instanceof AxiosError) {
                     if(error.response && error.response?.data?.errors && error.response?.data?.message){
