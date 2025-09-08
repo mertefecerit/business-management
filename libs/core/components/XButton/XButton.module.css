@@ -7,29 +7,28 @@
   transition-all
   ease-in-out
   outline-0
+  shadow-sm
   cursor-pointer
   focus-within:ring-2
+  rounded
   select-none;
 
   &.xButtonSmall {
     @apply
     h-10
-    px-3
-    rounded-xl;
+    px-3;
   }
 
   &.xButtonMedium {
     @apply
     h-11
-    px-3.5
-    rounded-[0.875rem];
+    px-3.5;
   }
 
   &.xButtonLarge {
     @apply
     h-12
-    px-3.5
-    rounded-[0.875rem];
+    px-3.5;
   }
   &:not(.xButtonDisabled) {
     &.xButtonPrimary {

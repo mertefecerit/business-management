@@ -5,7 +5,7 @@ import Link from "next/link";
 
 const XLogo = () => {
     return (
-        <Link href={"/"}><Image src={Logo} alt={"ButBecause Logo"} priority={true}/></Link>
+        <Link href={"/"} className={"inline-block"}><Image src={Logo} alt={"ButBecause Logo"} priority={true}/></Link>
     );
 };
 

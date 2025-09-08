@@ -9,9 +9,9 @@
     }
   }
   &.xAlertBlockWarning {
-    @apply bg-warning-100 text-warning-600;
+    @apply bg-amber-100 text-amber-600;
     & > div.xAlertSeverityIcons{
-      @apply text-warning-500;
+      @apply text-amber-500;
     }
   }
   &.xAlertBlockError {

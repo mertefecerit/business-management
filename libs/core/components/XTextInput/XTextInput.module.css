@@ -22,7 +22,7 @@
   }
 
   & > .xTextInput {
-    @apply border border-zinc-200 flex items-center gap-2 shadow;
+    @apply border border-zinc-200 flex items-center gap-2 shadow rounded;
 
     &:not(.xTextInputIsInvalid), &:not(.xTextInputIsDisabled) {
       @apply border-zinc-200;
@@ -50,22 +50,19 @@
     &.xTextInputSmall {
       @apply
       h-10
-      px-3
-      rounded-xl;
+      px-3;
     }
 
     &.xTextInputMedium {
       @apply
       h-11
-      px-3.5
-      rounded-[0.875rem];
+      px-3.5;
     }
 
     &.xTextInputLarge {
       @apply
       h-12
-      px-3.5
-      rounded-[0.875rem];
+      px-3.5;
     }
   }
 }

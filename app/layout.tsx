@@ -21,7 +21,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-          className={`${inter.className} antialiased text-zinc-700`}
+          className={`${inter.className} antialiased text-zinc-700 bg-zinc-100`}
       >
       <AppStoreProvider>
           {children}
