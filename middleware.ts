@@ -7,16 +7,17 @@ export async function middleware(req: NextRequest, res: NextResponse) {
     const tokenExists = await hasCookie('token', { req, res });
     const { pathname, searchParams } = req.nextUrl
 
+    const protectedPaths = ['/dashboard'];
 
     const isAuthPage = pathname.startsWith('/auth/')
-    const isProtectedPages = pathname.startsWith('/wall') || pathname.startsWith('/account')
+    const isProtectedPages = protectedPaths.includes(pathname)
 
     if (!tokenExists && isProtectedPages) {
         return NextResponse.redirect(new URL('/auth/sign-in', req.url))
     }
 
     if (tokenExists && isAuthPage) {
-        return NextResponse.redirect(new URL('/wall', req.url))
+        return NextResponse.redirect(new URL('/dashboard', req.url))
     }
 
     if(!searchParams.get('token') && pathname === '/auth/reset-password') {
@@ -29,8 +30,7 @@ export async function middleware(req: NextRequest, res: NextResponse) {
 
 export const config = {
     matcher: [
-        '/wall/:path*',
-        '/account/:path*',
+        '/dashboard/:path*',
         '/auth/:path*'
     ],
 }

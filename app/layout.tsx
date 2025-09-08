@@ -19,7 +19,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
+    <html lang="en" className={"xl:text-base text-sm"}>
       <body
           className={`${inter.className} antialiased text-zinc-700 bg-zinc-100`}
       >
