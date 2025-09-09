@@ -13,10 +13,10 @@ const ProtectedLayoutSidebarMenuItem = ({item}: { item: IMenuItem }) => {
     const [subMenuStatus, setSubMenuStatus] = useState<boolean>(false)
 
 
-    const isActive = subMenuStatus || pathname === item.href ? 'text-white bg-zinc-600':'text-zinc-50 hover:bg-zinc-700'
+    const isActive = subMenuStatus || pathname === item.href ? 'bg-zinc-100':'hover:bg-zinc-100'
 
     const isActiveChildRoute = (childHref:string) => {
-        return subMenuStatus && pathname === childHref ? 'text-white bg-zinc-600':'text-zinc-50 hover:bg-zinc-700'
+        return subMenuStatus && pathname === childHref ? 'bg-zinc-100':'hover:bg-zinc-100'
     }
 
     return (
