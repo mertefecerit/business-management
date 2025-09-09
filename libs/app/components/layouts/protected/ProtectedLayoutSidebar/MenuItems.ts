@@ -141,4 +141,20 @@ const MenuItems = () => {
     return menuItems;
 }
 
+export const FlattenMenuItems = (items: IMenuItem[]): IMenuItem[] => {
+    const result: IMenuItem[] = [];
+
+    items.forEach(item => {
+        // Ana item'i ekle
+        result.push(item);
+
+        // Children varsa onları da ekle
+        if (item.children && item.children.length > 0) {
+            result.push(...item.children);
+        }
+    });
+
+    return result;
+};
+
 export default MenuItems;
