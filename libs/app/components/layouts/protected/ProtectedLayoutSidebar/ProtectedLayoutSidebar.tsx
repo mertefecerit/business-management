@@ -5,7 +5,7 @@ import XLogo from "@/libs/app/components/XLogo/XLogo";
 
 const ProtectedLayoutSidebar = () => {
     return (
-        <aside className={"w-[18.75rem] bg-white border-r border-zinc-200 grid grid-rows-[auto_1fr] overflow-hidden"}>
+        <aside className={"w-[18.75rem] bg-white border-r border-zinc-200 lg:grid grid-rows-[auto_1fr] overflow-hidden hidden"}>
             <div className={"p-4 text-center"}>
                 <XLogo />
                 <small className={"text-zinc-400 font-medium"}>Business Management App</small>

@@ -4,7 +4,7 @@ import ProtectedLayoutWrapper from "@/libs/app/components/layouts/protected/Prot
 
 const ProtectedLayout = ({children}:{children:React.ReactNode}) => {
     return (
-        <div className={"h-dvh overflow-hidden grid grid-cols-[auto_1fr]"}>
+        <div className={"h-dvh overflow-hidden grid lg:grid-cols-[auto_1fr] grid-cols-1"}>
             <ProtectedLayoutSidebar />
             <ProtectedLayoutWrapper>
                 {children}
