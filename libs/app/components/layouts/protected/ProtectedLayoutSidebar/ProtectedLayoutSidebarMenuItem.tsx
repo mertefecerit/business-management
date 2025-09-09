@@ -3,9 +3,10 @@
 import React, {useState} from 'react';
 import Link from "next/link";
 import {CaretRightIcon} from "@phosphor-icons/react";
-import {IMenuItem} from "@/libs/app/components/layouts/protected/ProtectedLayoutSidebar/ProtectedLayoutSidebarMenu";
+
 import {usePathname} from "next/navigation";
 import {AnimatePresence, motion} from "motion/react";
+import {IMenuItem} from "@/libs/app/components/layouts/protected/ProtectedLayoutSidebar/MenuItems";
 
 const ProtectedLayoutSidebarMenuItem = ({item}: { item: IMenuItem }) => {
     const pathname = usePathname()
