@@ -8,7 +8,7 @@ export const createAuthSignInCheckFormEntity = (arg:Partial<IAuthSignInForm> = {
 
 export const createAuthSignInFormEntity = (arg:Partial<IAuthSignInForm> = {}):IAuthSignInForm => {
     return structuredClone({
-        email: arg.email ?? "",
-        password : arg.password ?? "",
+        email: arg.email ?? "example@sparkprime.com",
+        password : arg.password ?? "123456",
     })
 }
