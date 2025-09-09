@@ -26,7 +26,10 @@ const ProtectedLayoutSidebarMenuItem = ({item}: { item: IMenuItem }) => {
                     className={`h-10 cursor-pointer px-4 font-medium text-sm flex items-center justify-between ${isActive}`}
                     onClick={() => setSubMenuStatus(!subMenuStatus)}
                 >
-                    <span>{item.label}</span>
+                    <div className={"flex items-center gap-2"}>
+                        {item.icon && React.createElement(item.icon)}
+                        <span>{item.label}</span>
+                    </div>
                     <motion.div
                         animate={{ rotate: subMenuStatus ? 90 : 0 }}
                         transition={{ duration: 0.2, ease: "easeInOut" }}
@@ -44,7 +47,7 @@ const ProtectedLayoutSidebarMenuItem = ({item}: { item: IMenuItem }) => {
                             >
                                 {
                                     item.children.map((child) => (
-                                        <Link key={child.href} href={child.href} className={`indent-4 h-10 min-h-10 cursor-pointer px-4 font-medium text-sm flex items-center justify-between ${isActiveChildRoute(child.href)}`}>
+                                        <Link key={child.href} href={child.href} className={`indent-5 h-10 min-h-10 cursor-pointer px-4 font-medium text-sm flex items-center justify-between ${isActiveChildRoute(child.href)}`}>
                                             {child.label}
                                         </Link>
                                     ))
@@ -56,7 +59,8 @@ const ProtectedLayoutSidebarMenuItem = ({item}: { item: IMenuItem }) => {
             </>
             :
             <div className={`h-10 cursor-pointer px-4 font-medium text-sm ${isActive}`}>
-                <Link href={item.href} className={"h-full flex items-center"}>
+                <Link href={item.href} className={"h-full flex items-center gap-2"}>
+                    {item.icon && React.createElement(item.icon)}
                     {item.label}
                 </Link>
             </div>

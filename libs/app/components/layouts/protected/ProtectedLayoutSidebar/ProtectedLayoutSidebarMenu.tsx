@@ -1,3 +1,5 @@
+"use client";
+
 import React from 'react';
 import ProtectedLayoutSidebarMenuItem from "@/libs/app/components/layouts/protected/ProtectedLayoutSidebar/ProtectedLayoutSidebarMenuItem";
 import MenuItems from "@/libs/app/components/layouts/protected/ProtectedLayoutSidebar/MenuItems";
