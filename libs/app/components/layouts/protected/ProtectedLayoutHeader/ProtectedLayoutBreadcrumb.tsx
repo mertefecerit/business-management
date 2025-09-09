@@ -17,7 +17,7 @@ const ProtectedLayoutBreadcrumb = () => {
                 breadcrumbs.map((breadcrumb, index) => (
                     <React.Fragment key={breadcrumb.href}>
                         {
-                            index > 0 && (<CaretRightIcon className="text-gray-400"/>)
+                            index > 0 && (<CaretRightIcon className="text-gray-500"/>)
                         }
                         {
                             breadcrumb.isLast ?
