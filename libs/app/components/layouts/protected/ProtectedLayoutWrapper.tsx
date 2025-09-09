@@ -1,5 +1,5 @@
 import React from 'react';
-import ProtectedLayoutHeader from "@/libs/app/components/layouts/protected/ProtectedLayoutHeader";
+import ProtectedLayoutHeader from "@/libs/app/components/layouts/protected/ProtectedLayoutHeader/ProtectedLayoutHeader";
 import ProtectedLayoutMain from "@/libs/app/components/layouts/protected/ProtectedLayoutMain";
 
 const ProtectedLayoutWrapper = ({children}:{children:React.ReactNode}) => {
