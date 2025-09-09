@@ -16,7 +16,7 @@ const ProtectedLayoutHeader = () => {
     })
 
     return (
-        <header className={"flex items-center justify-between gap-2 bg-white px-4 h-16"}>
+        <header className={"flex items-center justify-between gap-2 bg-zinc-800 px-4 h-16 border-b border-zinc-100"}>
             <span>{user?.name}</span>
             <XButton
                 onClick={onLogoutHandler}

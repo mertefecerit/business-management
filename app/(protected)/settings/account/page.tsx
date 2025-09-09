@@ -4,7 +4,7 @@ const Page = () => {
 
     return (
         <div>
-            Dashboard Page
+            Accounts Page
         </div>
     );
 };
