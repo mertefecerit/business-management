@@ -23,7 +23,7 @@ const ProtectedLayoutSidebarMenuItem = ({item}: { item: IMenuItem }) => {
         item.children ?
             <>
                 <div
-                    className={`h-10 cursor-pointer px-4 font-medium text-sm flex items-center justify-between ${isActive}`}
+                    className={`min-h-10 cursor-pointer px-4 font-medium text-sm flex items-center justify-between ${isActive}`}
                     onClick={() => setSubMenuStatus(!subMenuStatus)}
                 >
                     <div className={"flex items-center gap-2"}>
@@ -38,7 +38,7 @@ const ProtectedLayoutSidebarMenuItem = ({item}: { item: IMenuItem }) => {
                     </motion.div>
                 </div>
 
-                <div className={"overflow-hidden"}>
+                <div>
                     <AnimatePresence>
                         {
                             subMenuStatus &&
@@ -47,7 +47,7 @@ const ProtectedLayoutSidebarMenuItem = ({item}: { item: IMenuItem }) => {
                             >
                                 {
                                     item.children.map((child) => (
-                                        <Link key={child.href} href={child.href} className={`indent-5 h-10 min-h-10 cursor-pointer px-4 font-medium text-sm flex items-center justify-between ${isActiveChildRoute(child.href)}`}>
+                                        <Link key={child.href} href={child.href} className={`indent-5 min-h-10 cursor-pointer px-4 font-medium text-sm flex items-center justify-between ${isActiveChildRoute(child.href)}`}>
                                             {child.label}
                                         </Link>
                                     ))
@@ -58,7 +58,7 @@ const ProtectedLayoutSidebarMenuItem = ({item}: { item: IMenuItem }) => {
                 </div>
             </>
             :
-            <div className={`h-10 cursor-pointer px-4 font-medium text-sm ${isActive}`}>
+            <div className={`min-h-10 cursor-pointer px-4 font-medium text-sm ${isActive}`}>
                 <Link href={item.href} className={"h-full flex items-center gap-2"}>
                     {item.icon && React.createElement(item.icon)}
                     {item.label}
