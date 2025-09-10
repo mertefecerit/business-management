@@ -44,20 +44,40 @@ const ProtectedLayoutSidebarMenuItem = ({item}: { item: IMenuItem }) => {
                 </div>
 
                 <div>
-                    <AnimatePresence>
+                    <AnimatePresence mode={"wait"}>
                         {
-                            subMenuStatus &&
-                            <motion.div
-                                className={"flex flex-col gap-[1px]"}
-                            >
-                                {
-                                    item.children.map((child) => (
-                                        <Link key={child.href} href={child.href} className={`indent-5 min-h-10 cursor-pointer px-4 font-medium text-sm flex items-center justify-between ${isActiveChildRoute(child.href)}`}>
-                                            {child.label}
-                                        </Link>
-                                    ))
-                                }
-                            </motion.div>
+                            subMenuStatus && (
+                                <motion.div
+                                    className={"flex flex-col gap-[1px] overflow-hidden"}
+                                    initial={{
+                                        opacity: 0,
+                                        height: 0,
+                                        y: -10
+                                    }}
+                                    animate={{
+                                        opacity: 1,
+                                        height: "auto",
+                                        y: 0
+                                    }}
+                                    exit={{
+                                        opacity: 0,
+                                        height: 0,
+                                        y: -10
+                                    }}
+                                    transition={{
+                                        duration: 0.2,
+                                        ease: "easeInOut"
+                                    }}
+                                >
+                                    {
+                                        item.children.map((child) => (
+                                            <Link key={child.href} href={child.href} className={`indent-5 min-h-10 cursor-pointer px-4 font-medium text-sm flex items-center justify-between ${isActiveChildRoute(child.href)}`}>
+                                                {child.label}
+                                            </Link>
+                                        ))
+                                    }
+                                </motion.div>
+                            )
                         }
                     </AnimatePresence>
                 </div>
