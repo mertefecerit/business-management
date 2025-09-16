@@ -22,16 +22,6 @@ declare global {
         isPending: boolean;
         setIsPending: (value: boolean) => void;
     }
-
-    interface IErrorBagControl<T> {
-        errorBag : TErrorBag<T>
-        setErrorBag : (errorBag:TErrorBag<T>) => void
-    }
-
-    interface IMessageControl {
-        message : string
-        setMessage : (message: string) => void
-    }
 }
 
 export {}

@@ -8,3 +8,8 @@ export interface IXAlertBlockProps {
     children    : React.ReactNode
     onClose     ?: () => void
 }
+
+export interface IXAlertBlockHook
+    extends Omit<IXAlertBlockProps, 'children' | 'onClose'> {
+    message: string
+}
